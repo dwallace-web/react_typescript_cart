@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import IconButton from '@material-ui/core/IconButton';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+    .leader{
+        background-color: blue;
+        color: white;
+    }
+`;
 
 export const StyledButton = styled(IconButton)`
     position: fixed;

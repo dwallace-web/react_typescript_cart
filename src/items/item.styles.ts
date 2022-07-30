@@ -5,12 +5,13 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
-  border: 2px solid black;
-  border-radius: 20px;
+  border: 4px solid grey;
+  border-radius: 10px;
   height: 100%;
 
   img {
     max-height: 250px;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
   }

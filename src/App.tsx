@@ -88,9 +88,13 @@ const App = () => {
 
   return (
     <Wrapper>
-
-      <div className="App">
-        Shopping Cart in Typescript with ReactJS
+      <div className="leader">
+        <h1>
+          Shopping Cart in Typescript with ReactJS
+        </h1>
+        <h2>
+          Product List Page
+        </h2>
       </div>
 
       {/* handle how the shopping cart displays on the app*/}
@@ -109,13 +113,13 @@ const App = () => {
         <Badge
           // badgeContent={getTotalItems(cartItems)} 
           color="error">
-          <div>Shopping Cart</div>
+          <div className="leader">Shopping Cart</div>
           <AddShoppingCart />
         </Badge>
       </StyledButton>
 
       {/* grid to mapp the network call response to the page*/}
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         {data?.map(item => (
           <Grid item key={item.id} xs={12} sm={4}>
             <Item item={item} handleAddToCart={handleAddToCart} />

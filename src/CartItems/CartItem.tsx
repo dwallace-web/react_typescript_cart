@@ -1,6 +1,8 @@
 import Button from '@material-ui/core/Button'
+import { Grid } from '@material-ui/core';
 import { CartItemType } from '../App'
 import { Wrapper } from './CartItem.styles';
+
 
 //set the type values for the incoming props
 type Props = {
@@ -17,9 +19,15 @@ const CartItem: React.FC<Props> = ({
 }) =>
   <Wrapper>
     <div>
-      <h2>{item.title}</h2>
-      <img src={item.image} alt={item.title} />
-      <div className='row'>
+      <div>
+        <h2>{item.title}</h2>
+        <img className='cart_img' src={item.image} alt={item.title} />
+      </div>
+      <div>
+        <h6>Price $: {item.price}</h6>
+        <h6>Total Items: {item.amount}</h6>
+        <h3>Total cost: {(item.amount * item.price).toFixed(2)}
+        </h3>
         <Button
           onClick={() => removeFromCart(item.id)}
         >
@@ -31,10 +39,7 @@ const CartItem: React.FC<Props> = ({
           Add
         </Button>
       </div>
-      <h5>Price $: {item.price}</h5>
-      <h5>Total Items: {item.amount}</h5>
-      <h6>Total cost: {(item.amount * item.price).toFixed(2)}</h6>
-    </div>
-  </Wrapper>
+    </div >
+  </Wrapper >
 
 export default CartItem
